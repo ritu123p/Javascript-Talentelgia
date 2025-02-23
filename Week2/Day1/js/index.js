@@ -110,5 +110,3 @@ const editLocalTodos = (oldTodo, newTodo) => {
 document.addEventListener('DOMContentLoaded', getLocalTodos);
 addBtn.addEventListener('click', addTodo);
 todoList.addEventListener('click', updateTodo);
-
-
