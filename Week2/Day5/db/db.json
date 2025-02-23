@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": "1740333401336",
+      "name": "Rituparna Behura",
+      "email": "mumma@gmail.com",
+      "address": {
+        "city": "Einstein Academy of Technology and Management,Baniatangi, khurdha,Odisha"
+      },
+      "role": "Customer",
+      "phone": "7654345679",
+      "company": {
+        "website": "https://www.boxcom",
+        "name": "Virtual"
+      }
+    }
+  ]
+}
