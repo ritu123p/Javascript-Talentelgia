@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //delete data 
 window.deleteData = function (id) {
-    fetch(`http://localhost:3000/users/${id}`, {
+    fetch(`http://http://192.168.0.53:3000/users/${id}`, {
         method: 'DELETE'
     })
     .then(() => {
@@ -19,7 +19,7 @@ window.deleteData = function (id) {
 
 // Function to populate edit form
 window.editUser = function(userId) {
-    fetch(`http://localhost:3000/users/${userId}`)
+    fetch(`http://192.168.0.53:3000/users/${userId}`)
         .then(response => response.json())
         .then(user => {
             document.getElementById("editUserId").value = user.id;
@@ -61,7 +61,7 @@ document.getElementById("editUserForm").addEventListener("submit", function (e) 
     };
 
     // Send PUT request to update user data
-    fetch(`http://localhost:3000/users/${userId}`, {
+    fetch(`http://192.168.0.53:3000/users/${userId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedUser)
@@ -90,7 +90,7 @@ document.getElementById("editUserForm").addEventListener("submit", function (e) 
 
 
     const tableBody = document.querySelector('#user-table tbody');
-    fetch('http://localhost:3000/users')
+    fetch('http://192.168.0.53:3000/users')
         .then(response => response.json())
         .then(data => {
             data.forEach(user => {
@@ -228,7 +228,7 @@ document.getElementById("editUserForm").addEventListener("submit", function (e) 
             };
 
             // Send POST request to JSON Server
-            fetch("http://localhost:3000/users", {
+            fetch("http://192.168.0.53:3000/users", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
