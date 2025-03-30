@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+</head>
+<body class="bg-gray-400 flex items-center justify-center min-h-screen p-4">
+    <div class="max-w-full">
+        
+        <div class="max-w-5xl w-full bg-gray-300 p-6 rounded-lg shadow-xl">
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-4">
+                <div class="relative w-2/4">
+                    <input id="searchBar" type="text" placeholder="Search city here..." class="w-full py-2 px-4 rounded-full shadow-md focus:outline-none">
+                </div>
+                <button id="search-btn" type="submit" class="inline-flex items-center py-2.5 px-3 ms-2 text-sm font-medium text-white bg-yellow-600 rounded-lg border border-yellow-600 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-yellow-600 dark:bg-yellow-600 dark:hover:bg-yellow-600 dark:focus:ring-yellow-600">
+                    <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>Search
+                </button>
+                <div class="fav-btn">
+                    <button id="whitelist" class="p-5 text-white rounded-md">💟</button>
+                </div>
+                <div class="relative">
+                    <button id="multiLevelDropdownButton" data-dropdown-toggle="multi-dropdown" class="text-white bg-black hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-600 font-medium rounded-full w-10 h-10 flex items-center justify-center">
+                        R
+                    </button>
+                    <div id="multi-dropdown" class="z-10 hidden bg-black divide-y divide-gray-100 rounded-lg shadow-sm w-44">
+                        <ul class="py-2 text-sm text-white" aria-labelledby="multiLevelDropdownButton">
+                            <li><p id="userName" class="block px-4 py-2 hover:bg-gray">Name</p></li>
+                            <li id="wishList">
+                                
+                                <li id="wishList" class="relative"> 
+                                    <!-- Wishlist Button -->
+                                    <button id="dropdownHoverButton" class="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 inline-flex items-center">
+                                        Wishlist 
+                                        <svg class="w-2.5 h-2.5 ms-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                        </svg>
+                                    </button>
+                                
+                                    <!-- Wishlist Dropdown -->
+                                    <div id="dropdownHover" class="absolute left-0 mt-2 z-10 hidden bg-black text-white rounded-lg shadow-lg w-60 py-3">
+                                        <ul class="py-2 text-sm text-gray-700 text-center">
+                                            <li id="wish-item" class="flex justify-center items-center">
+                                                <a href="#" class="block w-full px-6 py-3 hover:bg-blue-400 rounded-lg">Dashboard</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                
+                                
+                                
+                            </li>
+                            <li><a id="log-out" href="#" class="block px-4 py-2 hover:bg-blue-400">Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Weather Info -->
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-gray-100 p-6 rounded-lg shadow text-center">
+                    <h2 class="text-xl font-bold">Athens</h2>
+                    <p id="current-time" class="text-5xl font-bold mt-2">09:03</p>
+                    <p id="current-date" class="text-md text-gray-600">Thursday, 31 Aug</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow flex flex-col items-center">
+                    <h2 class="text-4xl font-bold">24°C</h2>
+                    <p id="feels-like" class="text-sm text-gray-500">Feels like: 22°C</p>
+                    <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="sun" class="w-16 mt-2">
+                    <p class="text-lg font-semibold">Sunny</p>
+                    <div class="grid grid-cols-2 gap-4 mt-4 text-sm text-gray-700">
+                        <p id="sunrise">🌅 Sunrise: 06:37 AM</p>
+                        <p id="sunset">🌇 Sunset: 20:37 PM</p>
+                        <p id="humidity">💧 Humidity: 41%</p>
+                        <p id="wind-speed">💨 Wind Speed: 2km/h</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Hourly Forecast -->
+            <div class="mt-4 bg-gray-100 p-6 rounded-lg shadow">
+                <h3 class="text-lg font-semibold">Hourly Forecast:</h3>
+                <div id="hourly-forecast" class="grid grid-cols-5 gap-4 mt-3 text-center">
+                    <div class="p-4 bg-yellow-200 rounded-lg"><p class="font-bold">12:00</p><p>☀️ 26°C</p><p class="text-xs text-gray-600">💨 3km/h</p></div>
+                    <div class="p-4 bg-orange-200 rounded-lg"><p class="font-bold">15:00</p><p>☀️ 27°C</p><p class="text-xs text-gray-600">💨 2km/h</p></div>
+                    <div class="p-4 bg-blue-200 rounded-lg"><p class="font-bold">18:00</p><p>🌥 27°C</p><p class="text-xs text-gray-600">💨 2km/h</p></div>
+                    <div class="p-4 bg-indigo-300 rounded-lg"><p class="font-bold">21:00</p><p>🌤 25°C</p><p class="text-xs text-gray-600">💨 3km/h</p></div>
+                    <div class="p-4 bg-purple-300 rounded-lg"><p class="font-bold">00:00</p><p>☀️ 22°C</p><p class="text-xs text-gray-600">💨 3km/h</p></div>
+                </div>
+            </div>
+    
+    
+            <!-- Weekly Forecast -->
+            <div class="mt-4 bg-gray-100 p-6 rounded-lg shadow">
+                <h3 class="text-lg font-semibold">5 Days Forecast:</h3>
+                <div id="day-forecast" class="grid grid-cols-5 gap-4 mt-3 text-center">
+                    <div class="flex flex-col items-center">
+                        <span>🌥</span>
+                        <p class="font-bold">20°C</p>
+                        <p class="text-xs text-gray-500">Fri, 1 Sep</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span>☀️</span>
+                        <p class="font-bold">22°C</p>
+                        <p class="text-xs text-gray-500">Sat, 2 Sep</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span>☀️</span>
+                        <p class="font-bold">27°C</p>
+                        <p class="text-xs text-gray-500">Sun, 3 Sep</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span>🌥</span>
+                        <p class="font-bold">18°C</p>
+                        <p class="text-xs text-gray-500">Mon, 4 Sep</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span>🌧</span>
+                        <p class="font-bold">16°C</p>
+                        <p class="text-xs text-gray-500">Tue, 5 Sep</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script defer src="../src/weather.js"></script>
+</body>
+</html>

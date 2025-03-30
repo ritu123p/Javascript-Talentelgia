@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100">
+    <div class="flex w-full max-w-4xl bg-white shadow-lg rounded-lg overflow-hidden">
+        <!-- Left Side: Login Form -->
+        <div class="w-1/2 p-8">
+            <!-- <div class="mb-6 text-indigo-600 text-3xl font-bold">&#8764;</div> -->
+            <h2 class="text-2xl font-semibold text-gray-800">Sign up</h2>
+            
+            <form class="mt-6">
+                <div>
+                    <label class="block text-gray-700">Name</label>
+                    <input id="Name" type="name" class="w-full px-4 py-2 mt-2 border rounded-lg focus:ring-2 focus:ring-indigo-500" required>
+                    <p id="nameError"></p>
+                </div>
+                <div>
+                    <label class="block text-gray-700">Email address</label>
+                    <input type="email" class="w-full px-4 py-2 mt-2 border rounded-lg focus:ring-2 focus:ring-indigo-500" required>
+                </div>
+                <div class="mt-4">
+                    <label class="block text-gray-700">Password</label>
+                    <input type="password" class="w-full px-4 py-2 mt-2 border rounded-lg focus:ring-2 focus:ring-indigo-500" required>
+                </div>
+                <div class="flex justify-between items-center mt-4">
+                    <label class="inline-flex items-center">
+                        <input type="checkbox" class="text-indigo-600">
+                        <span class="ml-2 text-gray-700">Remember me</span>
+                    </label>
+                    <a href="#" class="text-indigo-600">Forgot password?</a>
+                </div>
+                <button class="w-full bg-indigo-600 text-white font-semibold py-2 mt-6 rounded-lg hover:bg-indigo-700">Sign in</button>
+            </form>
+        </div>
+        <!-- Right Side: Image -->
+        <div class="w-1/2 hidden md:block">
+            <img src="../images/Mobile-login-Cristina.jpg" alt="Workspace Image" class="object-cover w-full h-full">
+        </div>
+    </div>
+</body>
+</html>
