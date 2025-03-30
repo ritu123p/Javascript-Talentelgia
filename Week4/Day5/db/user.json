@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "id": "591e",
+      "name": "Ritu",
+      "email": "uyuyuy77@g.com",
+      "password": "Ritu786@"
+    },
+    {
+      "id": "eb6d",
+      "name": "Soumya",
+      "email": "soumya@12.co",
+      "password": "Ritu78@@",
+      "favorites": [
+        "australia",
+        "shimla",
+        "new york",
+        "jajpur"
+      ]
+    },
+    {
+      "id": "26db",
+      "name": "hbh",
+      "email": "hjj@rujh.hu",
+      "password": "Ritu@8989",
+      "favorites": [
+        "mohali",
+        "bhubaneswar"
+      ]
+    },
+    {
+      "id": "391e",
+      "name": "Akash",
+      "email": "Akash@gmail.com",
+      "password": "Akash234@",
+      "favorites": [
+        "bhubaneswar"
+      ]
+    },
+    {
+      "id": "1ff6",
+      "name": "xyz",
+      "email": "xyz@gmail.com",
+      "password": "Xyz234@@"
+    },
+    {
+      "id": "9748",
+      "name": "nihar",
+      "email": "nihar@mm.co",
+      "password": "Nihar45@@",
+      "favorites": [
+        "australia",
+        "new york"
+      ]
+    },
+    {
+      "id": "4573",
+      "name": "Arpita",
+      "email": "arpita@gm.co",
+      "password": "Arpita12@",
+      "favorites": []
+    }
+  ]
+}

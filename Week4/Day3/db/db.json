@@ -1,0 +1,59 @@
+{
+  "users": [
+    {
+      "id": "2a9c",
+      "fullName": "Aditya Behura",
+      "email": "aditya@be.co",
+      "phone": "9868767556",
+      "address": "Einstein Academy of Technology and Management,Baniatangi, Kendrapara",
+      "role": "User",
+      "website": "http://www.twilio.com",
+      "company": "sony",
+      "password": "Aditya12@"
+    },
+    {
+      "id": "60b7",
+      "fullName": "Pratap Behura",
+      "email": "pratap@be.co",
+      "phone": "7654345679",
+      "address": "Einstein Academy of Technology and Management,Baniatangi, khurdha,Odisha, Parinuapada",
+      "role": "Admin",
+      "website": "https://www.box.com",
+      "company": "Virtual",
+      "password": "Pratap@12"
+    },
+    {
+      "id": "4a2f",
+      "fullName": "Swapnalin Mahapatra",
+      "email": "swapna@m.co",
+      "phone": "7654345679",
+      "address": "Einstein Academy of Technology and Management,Baniatangi, khurdha,Odisha, sai nivas",
+      "role": "Admin",
+      "website": "https://www.box.com",
+      "company": "Virtual",
+      "password": "Swapna@12"
+    },
+    {
+      "id": "455a",
+      "fullName": "Ritu Parna",
+      "email": "ooo@gmail.com",
+      "phone": "7654345679",
+      "address": "krishna tower, sai nivas",
+      "role": "User",
+      "website": "http://www.bkfs.com/Pages/default.aspx",
+      "company": "Virtual",
+      "password": "Aditya12@"
+    },
+    {
+      "id": "cb48",
+      "fullName": "Rituparna Behura",
+      "email": "mumma@gmail.com",
+      "phone": "7654345679",
+      "address": "Einstein Academy of Technology and Management,Baniatangi, khurdha,Odisha, sai nivas",
+      "role": "User",
+      "website": "http://www.hill- rom.com/",
+      "company": "xgffghj",
+      "password": "Pratap@12"
+    }
+  ]
+}
